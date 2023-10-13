@@ -13,8 +13,8 @@ shared_scripts {
   'config.lua'
 }
 
-client_script "resources/handler/client.lua"
-server_script "resources/handler/server.lua"
+client_script "resources/**/client.lua"
+server_script "resources/**/server.lua"
 
 files {
   'web/dist/index.html',
