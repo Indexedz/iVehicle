@@ -7,15 +7,17 @@ function module.new(locations)
 
   function self.first(size)
     return self.locations:find(function(vec)
-      return matrix.hasEntityInArea(vec, size)
+      return not matrix.hasEntityInArea(vec, size)
     end)
   end
 
   function self.get()
     return self.locations:filter(function(vec)
-      return matrix.hasEntityInArea(vec, size)
+      return not matrix.hasEntityInArea(vec, size)
     end)
   end
+
+  return self
 end
 
-return {}
+return module
