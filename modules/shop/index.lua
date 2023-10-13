@@ -10,7 +10,6 @@ local color    = 1
 function module.new(payload)
   local point = lib.points.new({ coords = payload.coords, distance = 100 })
   local self = {}
-  self.veh = nil;
   self.parking = parking.new(payload.left)
 
   local function onEnter()
