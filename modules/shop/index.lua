@@ -2,6 +2,7 @@ local module   = {}
 local radar    = import '@Index/radar';
 local vehicle  = import 'vehicle';
 local nui      = import 'nui';
+local parking  = import 'parking';
 local vehicles = array.data('vehicles');
 local shop     = nil
 local color    = 1
@@ -10,6 +11,7 @@ function module.new(payload)
   local point = lib.points.new({ coords = payload.coords, distance = 100 })
   local self = {}
   self.veh = nil;
+  self.parking = parking.new(payload.left)
 
   local function onEnter()
     local Index = vehicles:find(function(veh)
@@ -130,6 +132,10 @@ function module.changeColored(val, cb)
   cb(true)
   color = tonumber(val)
   shop.color(color)
+end
+
+function module.getCurrentShop()
+  return shop
 end
 
 return module
