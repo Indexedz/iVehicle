@@ -13,7 +13,7 @@ local states = array.new({
 
 local _CreateVehicle = CreateVehicle
 local function CreateVehicle(model, vec, networked)
-  local handler = _CreateVehicle(model, vec.x, vec.y, vec.z, vec.w, networked, true)
+  local handler = _CreateVehicle(model, vec.x, vec.y, vec.z, vec.w, networked, false)
 
   if networked then
     local id = NetworkGetNetworkIdFromEntity(handler)
