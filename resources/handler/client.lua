@@ -12,6 +12,9 @@ CreateThread(function()
   end)
 end)
 
+
+RegisterNUICallback("ChangeVehicle", shop.changeVehicle)
+RegisterNuiCallback("ChangeColored", shop.changeColored)
 RegisterNUICallback('BuyVehicle', function(payload, cb)
   cb(true);
   nui.close();
