@@ -135,7 +135,7 @@ function module.new(model, vec, networked, defaultStates, _resource)
     end
 
     properties.deformation = nil
-    return lib.setVehicleProperties(properties)
+    return lib.setVehicleProperties(self.handler, properties)
   end
 
   function self:onGround()
