@@ -1,6 +1,5 @@
 local player             = import '@Index/player';
-local behavior           = player.behavior();
-local player             = player.localPlayer();
+local behavior           = import '@Index/behavior';
 local seatbelt           = player.useState(false, 'seatbelt')
 local isInVehicleShop    = player.useState(false, 'isInVehicleShop')
 local handbrake          = 0

@@ -1,7 +1,7 @@
 local module = {}
-local player = import '@Index/player'.localPlayer();
-local inventory = data '@ox_inventory/vehicles';
+local player = import '@Index/player';
 local matrix = import 'matrix';
+local inventory = data '@ox_inventory/vehicles';
 local deformation = exports['deformation']
 local states = array.new({
   { 'plate',      SetVehicleNumberPlateText, "IBLOCK" },

@@ -1,5 +1,5 @@
 local module       = {}
-local player       = import '@Index/player'.localPlayer();
+local player       = import '@Index/player';
 local categories   = array.data('categories');
 local vehicles     = array.data('vehicles');
 local shops        = array.data('shops');
