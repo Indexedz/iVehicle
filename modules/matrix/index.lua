@@ -21,7 +21,7 @@ function module.hasEntityInArea(vec, size)
   local raycast = StartShapeTestBox(vec.x, vec.y, vec.z, size.x, size.y, size.z, 0.0, 0.0, vec.w, 2, flags, 0, 4)
   local retval, hit, endCoords, surfaceNormal, entity  = GetShapeTestResult(raycast) 
 
-  return hit, entity
+  return hit >= 1 and true or false, entity
 end
 
 return module
